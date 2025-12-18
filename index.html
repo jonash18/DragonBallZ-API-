@@ -72,12 +72,27 @@
             0 0 60px #ffdd00;
     }
 
-    body {
+    /* minimal CSS only to set images per breakpoint */
+    .bg-img-desktop {
         background-image: url('bg.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: fixed;
+        min-height: 100vh;
+    }
+
+    @media (max-width:1199.98px) {
+        .bg-img-desktop {
+            background-image: url('bgm.jpg');
+        }
+    }
+
+    @media (max-width:767.98px) {
+        .bg-img-desktop {
+            background-image: url('bgm.jpg');
+            background-attachment: fixed;
+        }
     }
 
     .card img {
@@ -90,7 +105,8 @@
     }
 </style>
 
-<body>
+<body class="bg-img-desktop">
+
 
 
     <div class="container-fluid position-relative p-5">
